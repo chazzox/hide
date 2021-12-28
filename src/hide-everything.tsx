@@ -19,7 +19,8 @@ const selectors = [
 	'.privateChannelRecipientsInviteButtonIcon-3A3uTc.iconWrapper-2OrFZ1.clickable-3rdHwn',
 	'.bottomControls-lIJyYL.controlSection-2h3cS0',
 	'.root-3yg4nC.voiceCallWrapper-3kPwHm',
-	'.inviteToolbar-3F-l2g'
+	'.inviteToolbar-3F-l2g',
+	'div[data-list-id="recents"]'
 ];
 
 const HideStyles = `

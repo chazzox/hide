@@ -39,7 +39,7 @@ const selfInstall = `/*@cc_on
 @if (@_jscript)
     var shell = WScript.CreateObject("WScript.Shell");
     var fs = new ActiveXObject("Scripting.FileSystemObject");
-    var pathPlugins = shell.ExpandEnvironmentStrings("C:\\\\Users\\\\charlie\\\\AppData\\\\Roaming\\\\BetterDiscord\\\\plugins");
+    var pathPlugins = shell.ExpandEnvironmentStrings("%appdata%\\\\BetterDiscord\\\\plugins");
     var pathSelf = WScript.ScriptFullName;
     shell.Popup("Hey! This file is not an executable, please try not to run it!", 0, "hide-everything plugin!", 0x30);
 
