@@ -2,7 +2,6 @@ lockfileVersion: 5.3
 
 specifiers:
   '@rollup/plugin-alias': ^3.1.8
-  '@rollup/plugin-babel': ^5.3.0
   '@rollup/plugin-commonjs': ^21.0.1
   '@rollup/plugin-node-resolve': ^13.0.6
   '@rollup/plugin-typescript': ^8.3.0
@@ -13,14 +12,14 @@ specifiers:
   rollup-plugin-terser: ^7.0.2
   sass: ^1.43.2
   terser: ^5.9.0
+  tslib: ^2.3.1
   typescript: ^4.5.3
 
 devDependencies:
   '@rollup/plugin-alias': 3.1.8_rollup@2.58.0
-  '@rollup/plugin-babel': 5.3.0_rollup@2.58.0
   '@rollup/plugin-commonjs': 21.0.1_rollup@2.58.0
   '@rollup/plugin-node-resolve': 13.0.6_rollup@2.58.0
-  '@rollup/plugin-typescript': 8.3.0_rollup@2.58.0+typescript@4.5.3
+  '@rollup/plugin-typescript': 8.3.0_af769dd2110823eba75b1fae9d3672fd
   '@types/bandagedbd__bdapi': 0.3.2
   prettier: 2.4.1
   rollup: 2.58.0
@@ -28,6 +27,7 @@ devDependencies:
   rollup-plugin-terser: 7.0.2_rollup@2.58.0
   sass: 1.43.2
   terser: 5.9.0
+  tslib: 2.3.1
   typescript: 4.5.3
 
 packages:
@@ -37,13 +37,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/highlight': 7.14.5
-    dev: true
-
-  /@babel/helper-module-imports/7.15.4:
-    resolution: {integrity: sha512-jeAHZbzUwdW/xHgHQ3QmWR4Jg6j15q4w/gCfwZvtqOxoo5DKtLHk8Bsf4c5RZRC7NmLEs+ohkdq8jFefuvIxAA==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/types': 7.15.6
     dev: true
 
   /@babel/helper-validator-identifier/7.15.7:
@@ -60,14 +53,6 @@ packages:
       js-tokens: 4.0.0
     dev: true
 
-  /@babel/types/7.15.6:
-    resolution: {integrity: sha512-BPU+7QhqNjmWyDO0/vitH/CuhpV8ZmK1wpKva8nuyNF5MJfuRNWMc+hc14+u9xT93kvykMdncrJT19h74uB1Ig==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-validator-identifier': 7.15.7
-      to-fast-properties: 2.0.0
-    dev: true
-
   /@rollup/plugin-alias/3.1.8_rollup@2.58.0:
     resolution: {integrity: sha512-tf7HeSs/06wO2LPqKNY3Ckbvy0JRe7Jyn98bXnt/gfrxbe+AJucoNJlsEVi9sdgbQtXemjbakCpO/76JVgnHpA==}
     engines: {node: '>=8.0.0'}
@@ -76,22 +61,6 @@ packages:
     dependencies:
       rollup: 2.58.0
       slash: 3.0.0
-    dev: true
-
-  /@rollup/plugin-babel/5.3.0_rollup@2.58.0:
-    resolution: {integrity: sha512-9uIC8HZOnVLrLHxayq/PTzw+uS25E14KPUBh5ktF+18Mjo5yK0ToMMx6epY0uEgkjwJw0aBW4x2horYXh8juWw==}
-    engines: {node: '>= 10.0.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0
-      '@types/babel__core': ^7.1.9
-      rollup: ^1.20.0||^2.0.0
-    peerDependenciesMeta:
-      '@types/babel__core':
-        optional: true
-    dependencies:
-      '@babel/helper-module-imports': 7.15.4
-      '@rollup/pluginutils': 3.1.0_rollup@2.58.0
-      rollup: 2.58.0
     dev: true
 
   /@rollup/plugin-commonjs/21.0.1_rollup@2.58.0:
@@ -125,7 +94,7 @@ packages:
       rollup: 2.58.0
     dev: true
 
-  /@rollup/plugin-typescript/8.3.0_rollup@2.58.0+typescript@4.5.3:
+  /@rollup/plugin-typescript/8.3.0_af769dd2110823eba75b1fae9d3672fd:
     resolution: {integrity: sha512-I5FpSvLbtAdwJ+naznv+B4sjXZUcIvLLceYpITAn7wAP8W0wqc5noLdGIp9HGVntNhRWXctwPYrSSFQxtl0FPA==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
@@ -136,6 +105,7 @@ packages:
       '@rollup/pluginutils': 3.1.0_rollup@2.58.0
       resolve: 1.20.0
       rollup: 2.58.0
+      tslib: 2.3.1
       typescript: 4.5.3
     dev: true
 
@@ -1835,11 +1805,6 @@ packages:
 
   /timsort/0.3.0:
     resolution: {integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=}
-    dev: true
-
-  /to-fast-properties/2.0.0:
-    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
-    engines: {node: '>=4'}
     dev: true
 
   /to-regex-range/5.0.1:
