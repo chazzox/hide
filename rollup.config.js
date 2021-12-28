@@ -6,7 +6,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 
 import styles from 'rollup-plugin-styles';
-import { terser } from 'rollup-plugin-terser';
 
 import { name, description, version } from './package.json';
 import os from 'os';
@@ -23,8 +22,7 @@ function GetBetterDiscordPath() {
 	}
 }
 
-const meta = `
-/**
+const meta = `/**
  * @name ${name}
  * @author chazzox#1001
  * @authorId 267924628670775297
@@ -37,7 +35,8 @@ const meta = `
 `;
 
 // prettier-ignore
-const selfInstall = `/*@cc_on
+const selfInstall = `
+/*@cc_on
 @if (@_jscript)
     var shell = WScript.CreateObject("WScript.Shell");
     var fs = new ActiveXObject("Scripting.FileSystemObject");
@@ -66,13 +65,13 @@ export default defineConfig({
 	output: [
 		{
 			file: `plugin/${name}.plugin.js`,
-			format: 'cjs',
+			format: 'es',
 			banner: meta + selfInstall,
 			footer: '/*@end @*/'
 		},
 		{
 			file: path.join(...GetBetterDiscordPath(), `${name}.plugin.js`),
-			format: 'cjs',
+			format: 'es',
 			banner: meta + selfInstall,
 			footer: '/*@end @*/'
 		}
@@ -87,7 +86,7 @@ export default defineConfig({
 		}),
 
 		// resolve imports
-		nodeResolve(),
+		// nodeResolve(),
 		commonjs(),
 
 		// .scss files to inline BdApi string
@@ -101,19 +100,6 @@ export default defineConfig({
 				}
 			]
 		}),
-
-		// jsx transformer
-		typescript(),
-
-		// minifier
-		terser({
-			module: true,
-			compress: { sequences: false },
-			mangle: {},
-			parse: {},
-			rename: {},
-			// Remove all comments *except* the meta comment at the top
-			format: { comments: '/@name|@cc_on|@end/' }
-		})
+		typescript()
 	]
 });
