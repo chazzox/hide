@@ -1,5 +1,5 @@
 # hide
 
-A simple plugin to temporarily create a blank discord screen
+A simple plugin to temporarily create a blank discord screen on the click of a button!
 
-![Hide](https://github.com/chazzox/hide/raw/master/screenshot.png)
+![Hide](https://raw.githubusercontent.com/chazzox/hide/main/screenshot.png)
