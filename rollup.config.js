@@ -8,7 +8,7 @@ import typescript from '@rollup/plugin-typescript';
 import styles from 'rollup-plugin-styles';
 import { terser } from 'rollup-plugin-terser';
 
-import { name, description } from './package.json';
+import { name, description, version } from './package.json';
 import os from 'os';
 import path from 'path';
 
@@ -27,10 +27,12 @@ const meta = `
 /**
  * @name ${name}
  * @author chazzox#1001
+ * @authorId 267924628670775297
  * @description ${description}
- * @version 0.0.1
+ * @version ${version}
  * @website https://github.com/chazzox/hide-everything#readme
  * @source https://github.com/chazzox/hide-everything
+ * @donate https://www.paypal.me/chazzox
  */
 `;
 
@@ -41,7 +43,7 @@ const selfInstall = `/*@cc_on
     var fs = new ActiveXObject("Scripting.FileSystemObject");
     var pathPlugins = shell.ExpandEnvironmentStrings("%appdata%\\\\BetterDiscord\\\\plugins");
     var pathSelf = WScript.ScriptFullName;
-    shell.Popup("Hey! This file is not an executable, please try not to run it!", 0, "hide-everything plugin!", 0x30);
+    shell.Popup("Hey! This file is not an executable, please try not to run it!", 0, "hide plugin!", 0x30);
 
     if (fs.GetParentFolderName(pathSelf) === fs.GetAbsolutePathName(pathPlugins)) {
         shell.Popup("I'm in the correct folder already. Just reload Discord with Ctrl+R.", 0, "I'm already installed", 0x40);
