@@ -106,7 +106,7 @@ const ToggleButton = () => {
 	);
 };
 
-module.exports = class hide_everything {
+module.exports = class hide {
 	start() {
 		const HeaderBarContainer = BdApi.findModuleByDisplayName('HeaderBarContainer')?.prototype;
 		// @ts-expect-error
