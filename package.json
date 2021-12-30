@@ -4,8 +4,8 @@
 	"description": "Plugin template for better discord that hides everything",
 	"scripts": {
 		"start": "rollup --config -w",
-		"build": "rollup --config",
 		"watch": "rollup --config -w",
+		"build": "rollup --config",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
 	},
 	"author": {

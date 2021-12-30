@@ -27,8 +27,8 @@ const meta = `/**
  * @authorId 267924628670775297
  * @description ${description}
  * @version ${version}
- * @website https://github.com/chazzox/hide-everything#readme
- * @source https://github.com/chazzox/hide-everything
+ * @website https://github.com/chazzox/hide#readme
+ * @source https://github.com/chazzox/hide
  * @donate https://www.paypal.me/chazzox
  */
 `;
@@ -64,13 +64,13 @@ export default defineConfig({
 	output: [
 		{
 			file: `plugin/${name}.plugin.js`,
-			format: 'es',
+			format: 'cjs',
 			banner: meta + selfInstall,
 			footer: '/*@end @*/'
 		},
 		{
 			file: path.join(...GetBetterDiscordPath(), `${name}.plugin.js`),
-			format: 'es',
+			format: 'cjs',
 			banner: meta + selfInstall,
 			footer: '/*@end @*/'
 		}

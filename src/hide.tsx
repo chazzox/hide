@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import './index.scss';
 
 const css_id = 'hide-everything';
@@ -106,7 +106,7 @@ const ToggleButton = () => {
 	);
 };
 
-module.exports = class hide {
+export default class hide {
 	start() {
 		const HeaderBarContainer = BdApi.findModuleByDisplayName('HeaderBarContainer')?.prototype;
 		// @ts-expect-error
@@ -118,4 +118,4 @@ module.exports = class hide {
 		// @ts-expect-error
 		BdApi.Patcher.unpatchAll('hide');
 	}
-};
+}
