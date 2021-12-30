@@ -1,7 +1,6 @@
 import { defineConfig } from 'rollup';
 
 import alias from '@rollup/plugin-alias';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 
@@ -86,7 +85,7 @@ export default defineConfig({
 		}),
 
 		// resolve imports
-		// nodeResolve(),
+
 		commonjs(),
 
 		// .scss files to inline BdApi string
