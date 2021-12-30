@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-const css_id = 'hide-everything';
+const css_id = 'hide';
 
 const selectors = [
 	'.nowPlayingColumn-2sl4cE',
@@ -107,6 +107,9 @@ const ToggleButton = () => {
 };
 
 export default class hide {
+	load() {
+		BdApi.setData('hide', 'isHidden', true);
+	}
 	start() {
 		const HeaderBarContainer = BdApi.findModuleByDisplayName('HeaderBarContainer')?.prototype;
 		// @ts-expect-error

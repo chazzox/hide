@@ -7,6 +7,7 @@
  * @website https://github.com/chazzox/hide#readme
  * @source https://github.com/chazzox/hide
  * @donate https://www.paypal.me/chazzox
+ * @updateUrl https://raw.githubusercontent.com/chazzox/hide/main/plugin/hide.plugin.js
  */
 
 /*@cc_on
@@ -37,7 +38,7 @@ const react = BdApi.React;
 var css = "#toolButton{background:none;padding:0;outline:none;position:relative;margin:0 6px 0 0}#toolButton #tooltip{visibility:hidden;position:absolute;left:50%;bottom:-8px;transform:translate(-50%,100%)}#toolButton svg *{fill:var(--interactive-normal)}#toolButton:hover svg *{fill:var(--interactive-hover)}#toolButton:hover #tooltip{visibility:visible}";
 BdApi.injectCSS("hide-styles",css);
 
-const css_id = 'hide-everything';
+const css_id = 'hide';
 const selectors = [
     '.nowPlayingColumn-2sl4cE',
     '.content-3YMskv > .peopleListItem-2nzedh',
@@ -98,6 +99,9 @@ const ToggleButton = () => {
                 react.createElement("div", { className: "tooltipContent-bqVLWK" }, isHidden ? 'Show' : 'Hide')))));
 };
 class hide {
+    load() {
+        BdApi.setData('hide', 'isHidden', true);
+    }
     start() {
         var _a;
         const HeaderBarContainer = (_a = BdApi.findModuleByDisplayName('HeaderBarContainer')) === null || _a === void 0 ? void 0 : _a.prototype;

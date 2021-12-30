@@ -30,11 +30,12 @@ const meta = `/**
  * @website https://github.com/chazzox/hide#readme
  * @source https://github.com/chazzox/hide
  * @donate https://www.paypal.me/chazzox
+ * @updateUrl https://raw.githubusercontent.com/chazzox/hide/main/plugin/hide.plugin.js
  */
 `;
 
 // prettier-ignore
-const selfInstall = `
+const selfInstallHead = `
 /*@cc_on
 @if (@_jscript)
     var shell = WScript.CreateObject("WScript.Shell");
@@ -57,6 +58,8 @@ const selfInstall = `
 @else @*/
 `;
 
+const selfInstallFoot = '/*@end @*/';
+
 const projectRoot = path.resolve(__dirname);
 
 export default defineConfig({
@@ -65,14 +68,14 @@ export default defineConfig({
 		{
 			file: `plugin/${name}.plugin.js`,
 			format: 'cjs',
-			banner: meta + selfInstall,
-			footer: '/*@end @*/'
+			banner: meta + selfInstallHead,
+			footer: selfInstallFoot
 		},
 		{
 			file: path.join(...GetBetterDiscordPath(), `${name}.plugin.js`),
 			format: 'cjs',
-			banner: meta + selfInstall,
-			footer: '/*@end @*/'
+			banner: meta + selfInstallHead,
+			footer: selfInstallFoot
 		}
 	],
 	plugins: [
