@@ -19,7 +19,12 @@ const selectors = [
 	'.bottomControls-lIJyYL.controlSection-2h3cS0',
 	'.root-3yg4nC.voiceCallWrapper-3kPwHm',
 	'.inviteToolbar-3F-l2g',
-	'div[data-list-id="recents"]'
+	'div[data-list-id="recents"]',
+	'.pictureInPicture-3VocJq',
+	'.listItems-1uJgMC',
+	'.scroller-1Bvpku > div:not([class])',
+	'h3.cursorPointer-1j7DL8.title-29uC1r.fontDisplay-1dagSA.base-1x0h_U.size16-1P40sf',
+	'.children-19S4PO'
 ];
 
 const HideStyles = `
