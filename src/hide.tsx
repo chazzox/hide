@@ -24,7 +24,9 @@ const selectors = [
 	'.listItems-1uJgMC',
 	'.scroller-1Bvpku > div:not([class])',
 	'h3.cursorPointer-1j7DL8.title-29uC1r.fontDisplay-1dagSA.base-1x0h_U.size16-1P40sf',
-	'.children-19S4PO'
+	'.status-1XNdyw.disableFlex-2QuzIB',
+	'.akaBadge-1M-1Gw.textBadge-1iylP6.base-PmTxvP.baseShapeRound-1Mm1YW',
+	'.nicknames-1XK4Zt.overflow-WK9Ogt'
 ];
 
 const HideStyles = `
